@@ -55,3 +55,12 @@ const expenses = {
     this.publish("update", this.list);
   }
 };
+
+
+// Step 3: Add PubSub functionality
+// Object.assign copies properties and functionality
+// to a target object (param1: expenses) from a source object (param2: PubSub).
+// see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+Object.assign(expenses, PubSub);
+
+export default expenses;
